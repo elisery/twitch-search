@@ -1,9 +1,12 @@
 import React, { Component } from "react"
+import styles from "./layout.module.css"
 
 class Search extends Component {
   render() {
     return(
-      <h1>I'm a component</h1>
+      <div>
+        
+      </div>
     )
   }
 }
