@@ -1,0 +1,45 @@
+html{
+  font-size: 16px;
+}
+
+h5 {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.main_layout {
+  display: flex;
+  padding: 0rem;
+  height: 87vh;
+  overflow: hidden;
+}
+
+.search_area {
+  width: 70%;
+  border: 1px solid red;
+}
+
+.instructions {
+  margin: 1rem auto;
+  border: 1px solid green;
+  width: 70%;
+}
+
+.search_box {
+  margin: 0 auto;
+  width: 50%;
+  border: 1px solid violet;
+}
+
+.search_results {
+  margin: 0 auto;
+  width: 40%;
+  border: 1px solid magenta;
+}
+
+.sidebar {
+  width: 30%;
+  border: 1px solid blue;
+  background-color: #EBEBEB;
+  padding: 2rem 1rem;
+}
