@@ -1,0 +1,19 @@
+ul {
+  list-style: none;
+  list-style-type: none;
+  padding-left: 0;
+  padding-top: 16px;
+  -webkit-padding-start: 0;
+  margin-left: 0;
+  border: 1px solid grey;
+}
+
+li {
+  text-align: left;
+  border-bottom: 1px dotted grey;
+  padding-bottom: 0.75rem;
+}
+
+li:last-child {
+  border:none;
+}

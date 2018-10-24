@@ -31,10 +31,17 @@ h5 {
   border: 1px solid violet;
 }
 
+.search_box input {
+  width: 100%;
+}
+
 .search_results {
   margin: 0 auto;
   width: 40%;
   border: 1px solid magenta;
+}
+
+.search_results h5 {
 }
 
 .sidebar {
