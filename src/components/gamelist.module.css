@@ -7,6 +7,11 @@ ul {
   margin-left: 0;
 }
 
+.scroll {
+  height: 62vh;
+  overflow-y: scroll;
+}
+
 li {
   text-align: left;
   padding-bottom: 0.75rem;

@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import styles from "./search.module.css"
 import Game from "../requests/game"
 import GameList from "./gamelist";
+import GameDetails from "./gamedetails";
 
 class Search extends Component {
   constructor(props) {
@@ -10,13 +11,13 @@ class Search extends Component {
       loading: true,
       searchTerm: '',
       games: [],
-      gameImage: ''
+      selectedGame: ''
     }
     this.handleChange = this.handleChange.bind(this);
+    this.getGameID = this.getGameID.bind(this);
   }
 
   componentDidMount() {
-    // console.log(this.state.searchTerm);
     Game
       .all('')
       .then(games => {
@@ -34,15 +35,23 @@ class Search extends Component {
       .all(this.state.searchTerm)
       .then(games => {
         this.setState({ loading: false, games: games })
-        // console.log(games);
       })
       .catch(() => {
         this.setState({ loading: false })
       })
   }
 
+  getGameID(id) {
+    const { games } = this.state;
+    games.forEach(x => {
+      if (x._id === id) {
+        this.setState({ selectedGame: x });
+      }
+    })
+  }
+
   render() {
-    const { loading, games, gameImage } = this.state 
+    const { loading, games, selectedGame } = this.state 
 
     if (loading) {
       return (
@@ -51,7 +60,6 @@ class Search extends Component {
         </main>
       )
     }
-    // console.log(games);
 
     return(
       <div className={styles.main_layout}>
@@ -67,13 +75,11 @@ class Search extends Component {
           </div>
           <div className={styles.search_results}>
             <h5>Games:</h5>
-            <GameList games={games}/>
+            <GameList games={games} onGameClick={this.getGameID}/>
           </div>
         </div>
         <div className={styles.sidebar}>
-          name of game
-          image result here
-          # viewers
+          <GameDetails game={selectedGame}/>
         </div>
       </div>
     )

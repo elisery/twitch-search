@@ -3,12 +3,15 @@ import styles from "./gamelist.module.css"
 
 const GameList = props => {
   const { games = [] } = props;
+  const { onGameClick = () => {} } = props;
   return (
-    <ul className={styles.ul}>
-      {games.map((game, i) => (
-        <li className={styles.li} key={i}>{game.name}</li>
-      ))}
-    </ul>
+    <div className={styles.scroll}>
+      <ul className={styles.ul}>
+        {games.map((game, i) => (
+          <li className={styles.li} key={i} onClick={() => onGameClick(game._id)}>{game.name}</li>
+        ))}
+      </ul>
+    </div>
   )
 }
 
