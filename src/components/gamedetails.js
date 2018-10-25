@@ -8,7 +8,6 @@ const GameDetails = props => {
       <h5>Loading...</h5>
     )
   }
-  console.log(game.popularity.toLocaleString())
   return (
     <div className={styles.detailLayout}>
       <h3>{game.name}</h3>
