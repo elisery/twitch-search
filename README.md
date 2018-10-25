@@ -25,3 +25,7 @@ sidebar.
 
 * React
 * Gatsby 
+
+## Deployment
+
+See live site here: https://brave-neumann-42a107.netlify.com/
