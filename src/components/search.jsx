@@ -18,27 +18,31 @@ class Search extends Component {
   }
 
   componentDidMount() {
-    Game
-      .all('')
-      .then(games => {
-        this.setState({ loading: false, games: games })
-      })
-      .catch(() => {
-        this.setState({ loading: false })
-      })
+    if (this.state.searchTerm !== '') {
+      Game
+        .all(this.state.searchTerm)
+        .then(games => {
+          this.setState({ loading: false, games: games })
+        })
+        .catch(() => {
+          this.setState({ loading: false })
+        })
+    }
   }
 
   handleChange(term) {
     this.setState({ searchTerm: term.target.value })
     
-    Game
-      .all(this.state.searchTerm)
-      .then(games => {
-        this.setState({ loading: false, games: games })
-      })
-      .catch(() => {
-        this.setState({ loading: false })
-      })
+    if (this.state.searchTerm !== '') {
+      Game
+        .all(this.state.searchTerm)
+        .then(games => {
+          this.setState({ loading: false, games: games })
+        })
+        .catch(() => {
+          this.setState({ loading: false })
+        })
+    }
   }
 
   getGameID(id) {
@@ -51,15 +55,7 @@ class Search extends Component {
   }
 
   render() {
-    const { loading, games, selectedGame } = this.state 
-
-    if (loading) {
-      return (
-        <main>
-          <h2>Loading...</h2>
-        </main>
-      )
-    }
+    const { games, selectedGame } = this.state 
 
     return(
       <div className={styles.main_layout}>
