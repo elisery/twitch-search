@@ -1,10 +1,7 @@
 ul {
   list-style: none;
   list-style-type: none;
-  padding-left: 0;
-  padding-top: 16px;
-  -webkit-padding-start: 0;
-  margin-left: 0;
+  margin: 1rem;
 }
 
 .scroll {
@@ -13,11 +10,16 @@ ul {
 }
 
 li {
-  text-align: left;
-  padding-bottom: 0.75rem;
+  padding: 1rem 1rem;
   border: 1px solid darkgray;
+  margin-right: 1rem;
+  width: 16rem;
 }
 
-li:focus {
-  outline: solid 1px lightblue;
+ul li {
+  padding-left: 0.5rem;
+}
+
+li:hover {
+  box-shadow: 0 0 2px 2px skyblue;
 }
