@@ -10,6 +10,7 @@
     "gatsby-plugin-offline": "^2.0.5",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-typography": "^2.2.0",
+    "js-yaml": "^3.13.1",
     "lodash": "^4.17.14",
     "lodash.template": "^4.5.0",
     "react": "^16.5.1",
@@ -17,7 +18,8 @@
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.13",
     "typography": "^0.16.17",
-    "typography-theme-fairy-gates": "^0.15.11"
+    "typography-theme-fairy-gates": "^0.15.11",
+    "webpack-dev-server": "^3.7.2"
   },
   "keywords": [
     "gatsby"
